@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+
+<style>
+    *,::before,::after{
+        padding: 0;
+        margin: 0;
+        box-sizing: inherit;
+    }
+    html{
+        box-sizing: border-box;
+        font-size: 62.5%;
+    }
+    body{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .container ul{
+        display: flex;
+        gap: 1.5rem;
+    }
+    .container li{
+        position: relative;
+        width: 10.2rem;
+        list-style-type: none;
+        text-align: center;
+    }
+    .container a{
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: black;
+        padding: .5rem 1rem;
+        transition: all .2s;
+    }
+    .container .list span{
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        width: 2.5rem;
+        height: 100%;
+        transform-origin: top;
+        transform: scaleY(0);
+        background-color: #1f1f1f;
+        transition: transform .5s;
+    }
+    .container .list .span-1{
+        left: 0;
+        transition-delay: 0s;
+    }
+    .container .list .span-2{
+        left: 2.5rem;
+        transition-delay: .1s;
+    }
+    .container .list .span-3{
+        left: 5rem;
+        transition-delay: .2s;
+    }
+    .container .list .span-4{
+        left: 7.5rem;
+        transition-delay: .3s;
+    }
+
+    .container li:hover a{
+        color: white;
+    }
+    .container .list li:hover span{
+        transform-origin: bottom;
+        transform: scaleY(1);
+    }
+
+
+</style>
+
+<body>
+    <div class="container">
+        <ul class="list">
+            <li>
+                <a href="#">home</a>
+                <span class="span-1"></span>
+                <span class="span-2"></span>
+                <span class="span-3"></span>
+                <span class="span-4"></span>
+            </li>
+            <li>
+                <a href="#">about</a>
+                <span class="span-1"></span>
+                <span class="span-2"></span>
+                <span class="span-3"></span>
+                <span class="span-4"></span>
+            </li>
+            <li>
+                <a href="#">services</a>
+                <span class="span-1"></span>
+                <span class="span-2"></span>
+                <span class="span-3"></span>
+                <span class="span-4"></span>
+            </li>
+            <li>
+                <a href="#">portfolio</a>
+                <span class="span-1"></span>
+                <span class="span-2"></span>
+                <span class="span-3"></span>
+                <span class="span-4"></span>
+            </li>
+            <li>
+                <a href="#">contact</a>
+                <span class="span-1"></span>
+                <span class="span-2"></span>
+                <span class="span-3"></span>
+                <span class="span-4"></span>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
